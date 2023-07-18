@@ -1,1 +1,35 @@
-<p>wrapper works!</p>
+<mat-sidenav-container autosize>
+<mat-sidenav #sidenav mode="side" opened="true">
+    <mat-nav-list>
+
+        <mat-list-item>
+            <mat-icon mat-list-icon class="chevron-button sidenav-button" (click)="isExpanded = !isExpanded" [ngClass]="{'rotated': isExpanded}">view_list</mat-icon>
+        </mat-list-item>
+
+        <mat-list-item [routerLink]="'dashbaord'">
+            <mat-icon mat-list-icon class="">home</mat-icon>
+            <span *ngIf="isExpanded">Dashbaord</span>
+        </mat-list-item>
+
+        
+        <mat-list-item [routerLink]="'addenviroment'">
+            <mat-icon mat-list-icon class="">add_circle_outline</mat-icon>
+            <span *ngIf="isExpanded">Add Enviroment</span>
+        </mat-list-item>
+
+        
+        <mat-list-item [routerLink]="'editenviroment'">
+            <mat-icon mat-list-icon class="">create</mat-icon>
+            <span *ngIf="isExpanded">Edit Envirmoent</span>
+        </mat-list-item>
+
+    </mat-nav-list>
+</mat-sidenav>
+
+<div class="content">
+    <router-outlet> </router-outlet>
+</div>
+
+</mat-sidenav-container>
+
+

@@ -1,0 +1,14 @@
+mat-sidenav-container {
+    height: 100%;
+
+    mat-sidenav {
+
+        mat-nav-list {
+
+            .chevron-button {
+                font-size: 30px;
+                transition: 300ms ease-in-out
+            }
+        }
+    }
+}
